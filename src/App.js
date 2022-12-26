@@ -19,7 +19,7 @@ function App() {
           />
           <div style={{textAlign:"center"}}>
             <h1>Hi! I'm Jason</h1>
-            <div >
+            <div className="center-align">
             <code>BACKEND/CLOUD DEVELOPER <img src="assets/data-server.png" alt="server" style={{width: "1rem", height: "1rem"}} /> ☁️ </code> 
             </div>
           </div>
