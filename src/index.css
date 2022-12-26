@@ -5,9 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://image-bucket-youtorial.s3.eu-central-1.amazonaws.com/mountains.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.center-align {
+  display: grid;
+  place-items: center;  
+}
+
+.glass {
+  height: 100%;
+  margin: 1.5rem auto;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.text-container {
+  text-align: center;
 }
