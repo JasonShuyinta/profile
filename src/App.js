@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <div className="glass">
         <div className="center-align">
-          <Avatar src="/img/Avatar.jpeg" alt="profile" className="avatar" />
+          <Avatar src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/Avatar.jpeg" alt="profile" className="avatar" />
           <div style={{ textAlign: "center" }}>
             <h1>Hello World!</h1>
             <div className="center-align">
@@ -90,10 +90,10 @@ function App() {
             <h4>Certifications</h4>
             <div className="certifications">
               <div>
-                <img src="/assets/aws.png" alt="aws" className="certs" />
+                <img src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/aws.png" alt="aws" className="certs" />
               </div>
               <div>
-                <img src="/assets/gcp.png" alt="gcp" className="certs" />
+                <img src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/gcp.png" alt="gcp" className="certs" />
               </div>
             </div>
             <h4>Technologies</h4>
