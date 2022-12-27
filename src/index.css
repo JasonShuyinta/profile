@@ -22,10 +22,15 @@ code {
   place-items: center;  
 }
 
+.avatar {
+  width: 80px !important;
+  height: 80px !important;
+}
+
 .glass {
   height: 100%;
   margin: 1.5rem auto;
-  width: 60%;
+  width: 70%;
   padding: 2rem;
   border-radius: 25px;
   background: rgba(255,255,255,0.5);
@@ -38,4 +43,22 @@ code {
 
 .text-container {
   text-align: center;
+}
+
+.certifications {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.certs {
+  width: 100px;
+  height: 100px;
+}
+
+.divider {
+  height: 10px !important;
+  width: 90% !important;
+  color: black !important;
+  margin: 2rem 0 !important;
 }
