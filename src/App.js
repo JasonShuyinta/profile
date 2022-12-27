@@ -97,6 +97,7 @@ function App() {
               </div>
             </div>
             <h4>Technologies</h4>
+            
           </div>
         </div>
       </div>
