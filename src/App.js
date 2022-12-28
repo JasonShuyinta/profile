@@ -1,8 +1,8 @@
-import { Avatar, Divider } from "@mui/material";
+import { Avatar, Divider, Grid, Tooltip } from "@mui/material";
 import React from "react";
 import Navbar from "./components/Navbar";
 import Work from "./components/Work";
-import works from "./components/utils";
+import { works, technologies } from "./components/utils";
 
 function App() {
   return (
@@ -14,7 +14,11 @@ function App() {
       <Navbar />
       <div className="glass">
         <div className="center-align">
-          <Avatar src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/Avatar.jpeg" alt="profile" className="avatar" />
+          <Avatar
+            src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/Avatar.jpeg"
+            alt="profile"
+            className="avatar"
+          />
           <div style={{ textAlign: "center" }}>
             <h1>Hello World!</h1>
             <div className="center-align">
@@ -42,7 +46,9 @@ function App() {
           </div>
           <Divider className="divider" />
           <div style={{ textAlign: "center" }}>
-            <h2>Work</h2>
+            <div style={{ marginBottom: "3rem" }}>
+              <h2>WORK</h2>
+            </div>
             {works.map((work) => (
               <Work
                 name={work.name}
@@ -63,18 +69,18 @@ function App() {
           </div>
           <Divider className="divider" />
           <div style={{ textAlign: "center" }}>
-            <h2>About me</h2>
+            <div style={{ marginBottom: "3rem" }}>
+              <h2>ABOUT ME</h2>
+            </div>
             <p>
               As a Computer Science graduate from Bologna, I have spent my
               entire life living in this wonderful city.
             </p>
-
             <p>
               I am currently working as a Senior Application Development Analyst
               at a consulting firm, where I specialize in backend development. I
               also have a good foundation Cloud Computing and DevOps practices.
             </p>
-
             <p>
               In my free time, I enjoy coding and always strive to become the
               best version of myself, both personally and professionally. I
@@ -87,17 +93,33 @@ function App() {
               delay="2000"
               style={{ width: "80px", height: "80px" }}
             ></lord-icon>
-            <h4>Certifications</h4>
+            <div style={{ marginBottom: "3rem" }}>
+              <h4>Certifications</h4>
+            </div>
             <div className="certifications">
               <div>
-                <img src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/aws.png" alt="aws" className="certs" />
+                <img
+                  src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/aws.png"
+                  alt="aws"
+                  className="certs"
+                />
               </div>
               <div>
-                <img src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/gcp.png" alt="gcp" className="certs" />
+                <img
+                  src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/gcp.png"
+                  alt="gcp"
+                  className="certs"
+                />
               </div>
             </div>
-            <h4>Technologies</h4>
-            
+            <div style={{ marginBottom: "3rem" }}>
+              <h4>Technologies</h4>
+            </div>
+            <Grid container>
+              {technologies.map((tech) => (
+                <Technologies name={tech.name} img={tech.img} key={tech.name} />
+              ))}
+            </Grid>
           </div>
         </div>
       </div>
@@ -106,3 +128,13 @@ function App() {
 }
 
 export default App;
+
+export const Technologies = ({ name, img }) => {
+  return (
+    <Grid xs={6} item style={{padding: "1rem 0"}}>
+      <Tooltip title={name} placement="top">
+        <img src={img} alt={name} className="techlogo"/>
+      </Tooltip>
+    </Grid>
+  );
+};

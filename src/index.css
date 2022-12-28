@@ -37,8 +37,8 @@ code {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255,255,255,0.25);
-  box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+  box-shadow:  25px 25px 51px #a5a5a5,
+             -25px -25px 51px #dfdfdf;
 }
 
 .text-container {
@@ -61,4 +61,33 @@ code {
   width: 90% !important;
   color: black !important;
   margin: 2rem 0 !important;
+}
+
+.techlogo {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (min-width: 900px){
+  body {
+    font-size:larger;
+  }
+  .glass {
+    width: 50%;
+    padding: 2rem 3rem;
+  }
+  .avatar {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  
+  .certs {
+    width: 150px;
+    height: 150px;
+  }
+
+  .techlogo {
+    width: 150px;
+    height: 150px
+  }
 }
