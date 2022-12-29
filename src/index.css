@@ -68,6 +68,18 @@ code {
   height: 100px;
 }
 
+.contacts-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.contacts {
+  width: 80px;
+  height: 80px;
+}
+
 @media screen and (min-width: 900px){
   body {
     font-size:larger;
@@ -89,5 +101,10 @@ code {
   .techlogo {
     width: 150px;
     height: 150px
+  }
+
+  .contacts {
+    width: 150px;
+    height: 150px;
   }
 }

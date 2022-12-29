@@ -6,14 +6,10 @@ import { works, technologies } from "./components/utils";
 
 function App() {
   return (
-    <div
-      style={{
-        height: "100%",
-      }}
-    >
+    <div>
       <Navbar />
       <div className="glass">
-        <div className="center-align">
+        <div id="home" className="center-align">
           <Avatar
             src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/Avatar.jpeg"
             alt="profile"
@@ -44,7 +40,9 @@ function App() {
               expertise to make a positive impact on the world around me.
             </p>
           </div>
-          <Divider className="divider" />
+        </div>
+        <Divider className="divider" />
+        <div id="work">
           <div style={{ textAlign: "center" }}>
             <div style={{ marginBottom: "3rem" }}>
               <h2>WORK</h2>
@@ -67,7 +65,10 @@ function App() {
               </small>
             </span>
           </div>
-          <Divider className="divider" />
+        </div>
+
+        <Divider className="divider" />
+        <div id="about">
           <div style={{ textAlign: "center" }}>
             <div style={{ marginBottom: "3rem" }}>
               <h2>ABOUT ME</h2>
@@ -93,6 +94,7 @@ function App() {
               delay="2000"
               style={{ width: "80px", height: "80px" }}
             ></lord-icon>
+
             <div style={{ marginBottom: "3rem" }}>
               <h4>Certifications</h4>
             </div>
@@ -122,6 +124,51 @@ function App() {
             </Grid>
           </div>
         </div>
+
+        <Divider className="divider" />
+        <div id="contacts">
+          <div className="center-align">
+            <div style={{ marginBottom: "3rem" }}>
+              <h2>CONTACTS</h2>
+            </div>
+            <div className="contacts-container">
+              <img
+                src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/ig.png"
+                alt="ig"
+                className="contacts"
+              />
+              <img
+                src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/linkedin.png"
+                alt="linkedin"
+                className="contacts"
+              />
+              <img
+                src="https://monsterimagesaws.s3.eu-central-1.amazonaws.com/assets/git.png"
+                alt="git"
+                className="contacts"
+              />
+            </div>
+            <div style={{ textAlign: "center", marginTop: "3rem" }}>
+              <h4>
+                Let's get in touch and create something for the people or even
+                just for fun!
+              </h4>
+            </div>
+            <div style={{ display: "flex" }}>
+              <lord-icon
+                src="https://cdn.lordicon.com/kjkiqtxg.json"
+                trigger="loop"
+                style={{ width: "100px", height: "100px" }}
+              ></lord-icon>
+              <lord-icon
+                src="https://cdn.lordicon.com/zeabctil.json"
+                trigger="loop"
+                delay="2000"
+                style={{ width: "100px", height: "100px" }}
+              ></lord-icon>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -131,9 +178,9 @@ export default App;
 
 export const Technologies = ({ name, img }) => {
   return (
-    <Grid xs={6} item style={{padding: "1rem 0"}}>
+    <Grid xs={6} item style={{ padding: "1rem 0" }}>
       <Tooltip title={name} placement="top">
-        <img src={img} alt={name} className="techlogo"/>
+        <img src={img} alt={name} className="techlogo" />
       </Tooltip>
     </Grid>
   );
